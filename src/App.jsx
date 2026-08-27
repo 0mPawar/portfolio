@@ -22,26 +22,43 @@ import IconShowcase from "./pages/IconShowcase/IconShowcase";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route element={<MainLayout />}>
           <Route path={ROUTES.HOME} element={<Home />} />
           <Route path={ROUTES.ABOUT} element={<About />} />
+
           <Route path={ROUTES.PROJECTS} element={<Projects />} />
-          <Route path={ROUTES.PROJECT_DETAILS} element={<ProjectDetails />} />
+          <Route
+            path={ROUTES.PROJECT_DETAILS}
+            element={<ProjectDetails />}
+          />
+
           <Route path={ROUTES.SKILLS} element={<Skills />} />
           <Route path={ROUTES.TECHNOLOGIES} element={<Technologies />} />
+
           <Route path={ROUTES.EXPERIENCE} element={<Experience />} />
-          <Route path={ROUTES.EXPERIENCE_DETAILS} element={<ExperienceDetails />}/>
+          <Route
+            path={ROUTES.EXPERIENCE_DETAILS}
+            element={<ExperienceDetails />}
+          />
+
           <Route path={ROUTES.EDUCATION} element={<Education />} />
-          <Route path={ROUTES.EDUCATION_DETAILS} element={<EducationDetails />} />
+          <Route
+            path={ROUTES.EDUCATION_DETAILS}
+            element={<EducationDetails />}
+          />
+
           <Route path={ROUTES.CERTIFICATES} element={<Certificates />} />
           <Route path={ROUTES.ACHIEVEMENTS} element={<Achievements />} />
           <Route path={ROUTES.COMPETITIONS} element={<Competitions />} />
+
           <Route path={ROUTES.GITHUB} element={<GitHub />} />
           <Route path={ROUTES.CONTACT} element={<Contact />} />
+
           <Route path={ROUTES.NOT_FOUND} element={<NotFound />} />
           <Route path={ROUTES.ICON_SHOWCASE} element={<IconShowcase />} />
+
           <Route path={ROUTES.CATCH_ALL} element={<NotFound />} />
         </Route>
       </Routes>
