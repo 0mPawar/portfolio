@@ -6,7 +6,7 @@ The website uses a structured, data-driven approach where most portfolio content
 
 ## 🚀 Live Demo
 
-[View Portfolio](https://0mpawar.github.io/portfolio-website/)
+[View Portfolio](https://0mpawar.github.io/portfolio/)
 
 ## ✨ Features
 
@@ -53,13 +53,13 @@ The website uses a structured, data-driven approach where most portfolio content
 ### Clone the repository
 
 ```bash
-git clone https://github.com/0mPawar/portfolio-website.git
+git clone https://github.com/0mPawar/portfolio.git
 ```
 
 ### Navigate to the project
 
 ```bash
-cd portfolio-website
+cd portfolio
 ```
 
 ### Install dependencies
@@ -94,10 +94,10 @@ Example:
 
 ```text
 Repository:
-0mPawar/portfolio-website
+0mPawar/portfolio
 
 Website:
-https://0mpawar.github.io/portfolio-website/
+https://0mpawar.github.io/portfolio/
 ```
 
 ## 📚 Developer Documentation
