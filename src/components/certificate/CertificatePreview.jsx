@@ -1,4 +1,5 @@
 import { ExternalLink, X } from "lucide-react";
+import { getAssetUrl } from "../../utils/getAssetUrl";
 
 function CertificatePreview({ certificate, onClose }) {
   if (!certificate) return null;
@@ -32,7 +33,7 @@ function CertificatePreview({ certificate, onClose }) {
           <div className="flex shrink-0 items-center gap-2">
             {certificate.image && (
               <a
-                href={certificate.image}
+                href={getAssetUrl(certificate.image)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-3 py-2 text-sm font-medium text-white transition hover:bg-white/20"
@@ -57,7 +58,7 @@ function CertificatePreview({ certificate, onClose }) {
         <div className="overflow-auto rounded-2xl bg-black/30">
           {certificate.image ? (
             <img
-              src={certificate.image}
+              src={getAssetUrl(certificate.image)}
               alt={certificate.title}
               className="mx-auto max-h-[75vh] w-auto max-w-full object-contain"
             />

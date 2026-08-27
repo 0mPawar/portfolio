@@ -13,6 +13,7 @@ import ExperienceOverview from "../../components/experience/ExperienceOverview";
 import ExperienceProjects from "../../components/experience/ExperienceProjects";
 
 import { ROUTES } from "../../constants/routes";
+import { getAssetUrl } from "../../utils/getAssetUrl";
 
 function ExperienceDetails() {
   const { id } = useParams();
@@ -52,7 +53,7 @@ function ExperienceDetails() {
               <div className="flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-white/10 dark:bg-white/5">
                 {experience.logo ? (
                   <img
-                    src={experience.logo}
+                    src={getAssetUrl(experience.logo)}
                     alt={`${experience.company} logo`}
                     className="h-full w-full object-contain p-3"
                   />

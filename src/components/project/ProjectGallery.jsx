@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Images, Maximize2 } from "lucide-react";
 
 import ImagePreview from "../common/ImagePreview";
+import { getAssetUrl } from "../../utils/getAssetUrl";
 
 function ProjectGallery({ project }) {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -39,7 +40,7 @@ function ProjectGallery({ project }) {
             }`}
           >
             <img
-              src={image.src}
+              src={getAssetUrl(image.src)}
               alt={image.alt || `${project.name} screenshot ${index + 1}`}
               loading="lazy"
               className={`w-full object-cover transition duration-500 group-hover:scale-105 ${

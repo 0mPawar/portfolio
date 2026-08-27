@@ -25,6 +25,8 @@ import {
   getProjectRoute,
 } from "../../constants/routes";
 
+import { getAssetUrl } from "../../utils/getAssetUrl";
+
 function CertificateDetails({ certificate, onClose }) {
   if (!certificate) return null;
 
@@ -60,8 +62,9 @@ function CertificateDetails({ certificate, onClose }) {
     }
   };
 
-  const credentialUrl =
+  const rawCredentialUrl =
     certificate.credentialUrl || certificate.url || certificate.link;
+  const credentialUrl = getAssetUrl(rawCredentialUrl);
 
   const hasRelations =
     relatedProjects.length > 0 ||

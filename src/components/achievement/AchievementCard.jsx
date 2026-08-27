@@ -3,6 +3,7 @@ import {
   Calendar,
   Trophy,
 } from "lucide-react";
+import { getAssetUrl } from "../../utils/getAssetUrl";
 
 function AchievementCard({ achievement }) {
   return (
@@ -10,7 +11,7 @@ function AchievementCard({ achievement }) {
       <div className="relative flex aspect-[16/9] items-center justify-center overflow-hidden bg-gray-100 dark:bg-white/5">
         {achievement.image ? (
           <img
-            src={achievement.image}
+            src={getAssetUrl(achievement.image)}
             alt={achievement.title}
             className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
           />

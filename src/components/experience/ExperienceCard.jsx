@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 
 import { getExperienceRoute } from "../../constants/routes";
+import { getAssetUrl } from "../../utils/getAssetUrl";
 
 function ExperienceCard({ experience }) {
   const formatDate = (date) => {
@@ -44,7 +45,7 @@ function ExperienceCard({ experience }) {
           <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-gray-200 bg-gray-50 dark:border-white/10 dark:bg-white/5">
             {experience.logo ? (
               <img
-                src={experience.logo}
+                src={getAssetUrl(experience.logo)}
                 alt={`${experience.company} logo`}
                 className="h-full w-full object-contain p-2"
               />

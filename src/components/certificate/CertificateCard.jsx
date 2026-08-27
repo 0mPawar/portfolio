@@ -3,6 +3,7 @@ import { Award, Calendar, Eye, Info } from "lucide-react";
 
 import CertificatePreview from "./CertificatePreview";
 import CertificateDetails from "./CertificateDetails";
+import { getAssetUrl } from "../../utils/getAssetUrl";
 
 function CertificateCard({ certificate }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -20,7 +21,7 @@ function CertificateCard({ certificate }) {
         <div className="relative aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-white/5">
           {certificate.image ? (
             <img
-              src={certificate.image}
+              src={getAssetUrl(certificate.image)}
               alt={certificate.title}
               className={`h-full w-full object-cover transition-transform duration-500 ${
                 isHovered ? "scale-105" : "scale-100"

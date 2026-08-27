@@ -1,3 +1,5 @@
+import { getAssetUrl } from "../utils/getAssetUrl";
+
 export const APP_CONFIG = {
   name: "Om Pawar",
   websiteName: "Portfolio Website",
@@ -9,8 +11,8 @@ export const APP_CONFIG = {
   isUnderDevelopment: false,
   isUnderMaintenance: false,
 
-  profileImage: "/images/profile/profile.jpg",
-  resume: "/documents/resume.pdf",
+  profileImage: getAssetUrl("/images/profile/profile.jpg"),
+  resume: getAssetUrl("/documents/resume.pdf"),
 
   github: "https://github.com/0mPawar",
   linkedin: "https://www.linkedin.com/in/ompawar17",

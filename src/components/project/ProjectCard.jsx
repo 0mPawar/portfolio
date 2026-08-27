@@ -11,6 +11,7 @@ import Icon from "../common/Icon";
 import technologies from "../../data/technologies.json";
 import { getByIds } from "../../utils/relations/getByIds";
 import { getProjectRoute } from "../../constants/routes";
+import { getAssetUrl } from "../../utils/getAssetUrl";
 
 function ProjectCard({ project }) {
   const projectTechnologies = getByIds(
@@ -36,7 +37,7 @@ function ProjectCard({ project }) {
       >
         {project.banner ? (
           <img
-            src={project.banner}
+            src={getAssetUrl(project.banner)}
             alt={project.name}
             className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
           />

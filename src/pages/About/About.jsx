@@ -1,6 +1,7 @@
 import profile from "../../data/profile.json";
 
 import PageHeader from "../../components/common/PageHeader";
+import { getAssetUrl } from "../../utils/getAssetUrl";
 
 function About() {
   return (
@@ -18,7 +19,7 @@ function About() {
             <div className="overflow-hidden rounded-3xl border border-gray-200 bg-gray-100 dark:border-white/10 dark:bg-white/5">
               {profile.image ? (
                 <img
-                  src={profile.image}
+                  src={getAssetUrl(profile.image)}
                   alt={profile.name}
                   className="aspect-square w-full object-cover"
                 />

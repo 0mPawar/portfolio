@@ -12,6 +12,7 @@ import EducationOverview from "../../components/education/EducationOverview";
 import EducationProjects from "../../components/education/EducationProjects";
 
 import { ROUTES } from "../../constants/routes";
+import { getAssetUrl } from "../../utils/getAssetUrl";
 
 function EducationDetails() {
   const { id } = useParams();
@@ -53,7 +54,7 @@ function EducationDetails() {
               <div className="flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-white/10 dark:bg-white/5">
                 {education.logo ? (
                   <img
-                    src={education.logo}
+                    src={getAssetUrl(education.logo)}
                     alt={`${education.institute} logo`}
                     className="h-full w-full object-contain p-3"
                   />

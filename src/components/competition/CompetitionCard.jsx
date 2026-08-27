@@ -4,6 +4,7 @@ import {
   Trophy,
   Users,
 } from "lucide-react";
+import { getAssetUrl } from "../../utils/getAssetUrl";
 
 function CompetitionCard({ competition }) {
   return (
@@ -11,7 +12,7 @@ function CompetitionCard({ competition }) {
       <div className="relative aspect-[16/9] overflow-hidden bg-gray-100 dark:bg-white/5">
         {competition.image ? (
           <img
-            src={competition.image}
+            src={getAssetUrl(competition.image)}
             alt={competition.name}
             className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
           />

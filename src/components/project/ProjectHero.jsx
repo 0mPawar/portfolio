@@ -8,6 +8,7 @@ import {
 
 import Button from "../common/BackButton";
 import { ROUTES } from "../../constants/routes";
+import { getAssetUrl } from "../../utils/getAssetUrl";
 
 function ProjectHero({ project }) {
   const formatDate = (date) => {
@@ -26,7 +27,7 @@ function ProjectHero({ project }) {
         <>
           <div className="absolute inset-0">
             <img
-              src={project.banner}
+              src={getAssetUrl(project.banner)}
               alt=""
               className="h-full w-full scale-105 object-cover opacity-20 blur-sm"
             />
@@ -52,7 +53,7 @@ function ProjectHero({ project }) {
           <div className="flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-white/10 dark:bg-white/5 sm:h-28 sm:w-28">
             {project.logo ? (
               <img
-                src={project.logo}
+                src={getAssetUrl(project.logo)}
                 alt={`${project.name} logo`}
                 className="h-full w-full object-contain p-3"
               />

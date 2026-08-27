@@ -1,4 +1,5 @@
 import { X } from "lucide-react";
+import { getAssetUrl } from "../../utils/getAssetUrl";
 
 function ImagePreview({ image, onClose }) {
   if (!image) return null;
@@ -26,7 +27,7 @@ function ImagePreview({ image, onClose }) {
         </button>
 
         <img
-          src={image.src}
+          src={getAssetUrl(image.src)}
           alt={image.alt || "Project screenshot"}
           className="max-h-[85vh] max-w-full rounded-2xl object-contain shadow-2xl"
         />

@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 
 import { getEducationRoute } from "../../constants/routes";
+import { getAssetUrl } from "../../utils/getAssetUrl";
 
 function EducationCard({ education }) {
   const formatDate = (date) => {
@@ -41,7 +42,7 @@ function EducationCard({ education }) {
           <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-gray-200 bg-gray-50 dark:border-white/10 dark:bg-white/5">
             {education.logo ? (
               <img
-                src={education.logo}
+                src={getAssetUrl(education.logo)}
                 alt={`${education.institute} logo`}
                 className="h-full w-full object-contain p-2"
               />

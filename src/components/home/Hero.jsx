@@ -3,6 +3,7 @@ import { ArrowRight, Download, Mail } from "lucide-react";
 
 import profile from "../../data/profile.json";
 import { ROUTES } from "../../constants/routes";
+import { getAssetUrl } from "../../utils/getAssetUrl";
 
 function Hero() {
   const name = profile.name || "Your Name";
@@ -64,7 +65,7 @@ function Hero() {
 
             {profile.resume && (
               <a
-                href={profile.resume}
+                href={getAssetUrl(profile.resume)}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-5 py-3 font-semibold text-gray-300 transition hover:bg-white/5 hover:text-white"
@@ -83,7 +84,7 @@ function Hero() {
 
             <div className="relative h-64 w-64 overflow-hidden rounded-3xl border border-white/10 bg-white/5 sm:h-80 sm:w-80">
               <img
-                src={image}
+                src={getAssetUrl(image)}
                 alt={name}
                 className="h-full w-full object-cover"
               />

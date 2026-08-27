@@ -13,6 +13,7 @@ import { getExperienceRoute, getEducationRoute } from "../../constants/routes";
 
 import experiences from "../../data/experience.json";
 import education from "../../data/education.json";
+import { getAssetUrl } from "../../utils/getAssetUrl";
 
 function ProjectLinks({ project }) {
   const relatedExperience = experiences.filter((item) =>
@@ -105,7 +106,7 @@ function ProjectLinks({ project }) {
             {/* Demo */}
             {project.demoUrl && (
               <a
-                href={project.demoUrl}
+                href={getAssetUrl(project.demoUrl)}
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center justify-between rounded-xl border border-gray-200 px-4 py-3 text-sm font-medium text-gray-700 transition hover:border-gray-300 hover:bg-gray-50 dark:border-white/10 dark:text-gray-200 dark:hover:bg-white/5"
@@ -122,7 +123,7 @@ function ProjectLinks({ project }) {
             {/* Documentation */}
             {project.documentationUrl && (
               <a
-                href={project.documentationUrl}
+                href={getAssetUrl(project.documentationUrl)}
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center justify-between rounded-xl border border-gray-200 px-4 py-3 text-sm font-medium text-gray-700 transition hover:border-gray-300 hover:bg-gray-50 dark:border-white/10 dark:text-gray-200 dark:hover:bg-white/5"
