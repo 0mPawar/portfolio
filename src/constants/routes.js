@@ -1,7 +1,7 @@
 export const ROUTES = {
   HOME: "/",
   ABOUT: "/about",
-  ICON_SHOWCASE: "/icons",
+  
   PROJECTS: "/projects",
   PROJECT_DETAILS: "/projects/:slug",
 
@@ -22,6 +22,7 @@ export const ROUTES = {
   CONTACT: "/contact",
 
   NOT_FOUND: "/not-found",
+  ICON_SHOWCASE: "/icons",
   CATCH_ALL: "*",
 };
 

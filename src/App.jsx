@@ -25,7 +25,6 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route path="/icons" element={<IconShowcase />} />
           <Route path={ROUTES.HOME} element={<Home />} />
           <Route path={ROUTES.ABOUT} element={<About />} />
           <Route path={ROUTES.PROJECTS} element={<Projects />} />
@@ -42,6 +41,7 @@ function App() {
           <Route path={ROUTES.GITHUB} element={<GitHub />} />
           <Route path={ROUTES.CONTACT} element={<Contact />} />
           <Route path={ROUTES.NOT_FOUND} element={<NotFound />} />
+          <Route path={ROUTES.ICON_SHOWCASE} element={<IconShowcase />} />
           <Route path={ROUTES.CATCH_ALL} element={<NotFound />} />
         </Route>
       </Routes>
