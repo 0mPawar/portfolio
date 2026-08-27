@@ -1,0 +1,54 @@
+{
+  "mainNavigation": [
+    {
+      "label": "Home",
+      "path": "/"
+    },
+    {
+      "label": "About",
+      "path": "/about"
+    },
+    {
+      "label": "Projects",
+      "path": "/projects"
+    },
+    {
+      "label": "Skills",
+      "path": "/skills"
+    },
+    {
+      "label": "Experience",
+      "path": "/experience"
+    },
+    {
+      "label": "Education",
+      "path": "/education"
+    },
+    {
+      "label": "Contact",
+      "path": "/contact"
+    }
+  ],
+  "moreNavigation": [
+    {
+      "label": "Certificates",
+      "path": "/certificates"
+    },
+    {
+      "label": "Achievements",
+      "path": "/achievements"
+    },
+    {
+      "label": "Competitions",
+      "path": "/competitions"
+    },
+    {
+      "label": "Technologies",
+      "path": "/technologies"
+    },
+    {
+      "label": "GitHub",
+      "path": "/github"
+    }
+  ]
+}

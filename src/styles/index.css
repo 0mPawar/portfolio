@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@import "./globals.css";
+@import "./animations.css";
+
+@import "devicon/devicon.min.css";

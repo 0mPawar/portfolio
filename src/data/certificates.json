@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "name": "Full Stack Development Certificate",
+    "issuer": "Example Learning Platform",
+    "issueDate": "2025-12-15",
+    "credentialId": "CERT-123456",
+    "credentialUrl": "https://example.com/certificate",
+    "image": "/images/certificatges/full-stack-development.png",
+    "description": "Certificate demonstrating knowledge of full stack web development.",
+    "skills": [1, 2, 3, 4],
+    "technologies": [1, 2, 3, 4, 5],
+    "projects": [2],
+    "experience": [],
+    "education": [1],
+    "achievements": [],
+    "competitions": []
+  }
+]

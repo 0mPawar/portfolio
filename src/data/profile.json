@@ -1,0 +1,34 @@
+{
+  "tagline": "Building practical, scalable and user-focused digital experiences.",
+  "shortBio": "A passionate developer interested in full stack web development, backend systems, Android development and technology.",
+  "email": "om@example.com",
+  "phone": "+91 9000000000",
+  "location": "Maharashtra, India",
+  "profileImage": "/images/profile/profile.jpg",
+  "resume": "/documents/resume.pdf",
+  "availableForWork": true,
+
+  "name": "Om Pawar",
+  "title": "Full Stack Developer",
+
+  "image": "/images/profile/profile.jpg",
+
+  "about": [
+    "I am a developer with a strong interest in building web applications and exploring different areas of technology.",
+    "I enjoy working on backend systems, APIs, databases, and full-stack applications. Alongside web development, I am also interested in Android development, embedded systems, robotics, game development, and 3D technologies.",
+    "I enjoy learning by building projects and continuously exploring new technologies."
+  ],
+
+  "currently": "Currently pursuing my engineering education while building projects and exploring new technologies.",
+
+  "interests": [
+    "Web Development",
+    "Backend Development",
+    "Android Development",
+    "Game Development",
+    "Embedded Systems",
+    "Robotics",
+    "3D Graphics",
+    "VFX"
+  ]
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Backend Development",
+    "category": "Development",
+    "description": "Building server-side applications, APIs and backend systems.",
+    "icon": "Server"
+  },
+  {
+    "id": 2,
+    "name": "Frontend Development",
+    "category": "Development",
+    "description": "Building responsive and interactive user interfaces.",
+    "icon": "Monitor"
+  },
+  {
+    "id": 3,
+    "name": "Database Design",
+    "category": "Backend",
+    "description": "Designing and managing relational databases.",
+    "icon": "Database"
+  },
+  {
+    "id": 4,
+    "name": "API Development",
+    "category": "Backend",
+    "description": "Designing and developing REST APIs.",
+    "icon": "Network"
+  },
+  {
+    "id": 5,
+    "name": "Authentication & Authorization",
+    "category": "Backend",
+    "description": "Implementing secure authentication and role-based access.",
+    "icon": "ShieldCheck"
+  },
+  {
+    "id": 6,
+    "name": "Android Development",
+    "category": "Mobile",
+    "description": "Building Android applications using modern Android technologies.",
+    "icon": "Smartphone"
+  },
+  {
+    "id": 7,
+    "name": "Version Control",
+    "category": "Tools",
+    "description": "Managing source code and collaborative development workflows.",
+    "icon": "GitBranch"
+  },
+  {
+    "id": 8,
+    "name": "UI Development",
+    "category": "Frontend",
+    "description": "Creating reusable and responsive interface components.",
+    "icon": "Layout"
+  }
+]

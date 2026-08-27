@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "institution": "HSBPVT Parikrama Polytechnic Kashti",
+    "degree": "Diploma in Computer Engineering",
+    "location": "Maharashtra, India",
+    "logo": "/images/education/parikrama.png",
+    "startDate": "2023-08-01",
+    "endDate": "2026-06-01",
+    "current": false,
+    "shortDescription": "Completed a Diploma in Computer Engineering.",
+    "description": "Focused on computer engineering fundamentals, programming, databases, software development and practical project development.",
+    "projects": [2, 3, 4],
+    "skills": [6],
+    "technologies": [8, 9],
+    "certificates": [1],
+    "achievements": [1],
+    "competitions": [1]
+  },
+  {
+    "id": 2,
+    "institution": "Amrutvahini College of Engineering",
+    "degree": "B.E. in Electronics and Computer Engineering",
+    "location": "Maharashtra, India",
+    "logo": "/images/education/amrutvahini.png",
+    "startDate": "2026-08-01",
+    "endDate": "2029-06-01",
+    "current": true,
+    "shortDescription": "Currently pursuing a degree in Electronics and Computer Engineering.",
+    "description": "Studying electronics and computer engineering while continuing practical software development and technology exploration.",
+    "projects": [5],
+    "skills": [],
+    "technologies": [],
+    "certificates": [],
+    "achievements": [],
+    "competitions": []
+  }
+]

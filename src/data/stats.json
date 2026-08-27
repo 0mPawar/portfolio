@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "label": "Projects",
+    "value": 5,
+    "icon": "FolderKanban"
+  },
+  {
+    "id": 2,
+    "label": "Skills",
+    "value": 8,
+    "icon": "Brain"
+  },
+  {
+    "id": 3,
+    "label": "Technologies",
+    "value": 10,
+    "icon": "Cpu"
+  },
+  {
+    "id": 4,
+    "label": "Certificates",
+    "value": 1,
+    "icon": "Award"
+  }
+]

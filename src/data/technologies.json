@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "JavaScript",
+    "category": "Language",
+    "icon": "SiJavascript",
+    "logo": "/images/technologies/javascript.png"
+  },
+  {
+    "id": 2,
+    "name": "React",
+    "category": "Frontend Framework",
+    "icon": "SiReact",
+    "logo": "/images/technologies/react.png"
+  },
+  {
+    "id": 3,
+    "name": "Node.js",
+    "category": "Backend Runtime",
+    "icon": "SiNodedotjs",
+    "logo": "/images/technologies/nodejs.png"
+  },
+  {
+    "id": 4,
+    "name": "Express.js",
+    "category": "Backend Framework",
+    "icon": "SiExpress",
+    "logo": "/images/technologies/express.png"
+  },
+  {
+    "id": 5,
+    "name": "MySQL",
+    "category": "Database",
+    "icon": "SiMysql",
+    "logo": "/images/technologies/mysql.png"
+  },
+  {
+    "id": 6,
+    "name": "Tailwind CSS",
+    "category": "CSS Framework",
+    "icon": "SiTailwindcss",
+    "logo": "/images/technologies/tailwind.png"
+  },
+  {
+    "id": 7,
+    "name": "Git",
+    "category": "Version Control",
+    "icon": "SiGit",
+    "logo": "/images/technologies/git.png"
+  },
+  {
+    "id": 8,
+    "name": "Kotlin",
+    "category": "Language",
+    "icon": "SiKotlin",
+    "logo": "/images/technologies/kotlin.png"
+  },
+  {
+    "id": 9,
+    "name": "Jetpack Compose",
+    "category": "Android UI",
+    "icon": "SiJetpackcompose",
+    "logo": "/images/technologies/jetpack-compose.png"
+  },
+  {
+    "id": 10,
+    "name": "Vite",
+    "category": "Build Tool",
+    "icon": "SiVite",
+    "logo": "/images/technologies/vite.png"
+  }
+]

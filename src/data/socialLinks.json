@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "GitHub",
+    "username": "0mPawar",
+    "url": "https://github.com/0mPawar",
+    "icon": "FaGithub",
+    "iconLibrary": "fa6"
+  },
+  {
+    "id": 2,
+    "name": "LinkedIn",
+    "username": "ompawar17",
+    "url": "https://linkedin.com/in/ompawar17",
+    "icon": "FaLinkedin",
+    "iconLibrary": "fa6"
+  },
+  {
+    "id": 3,
+    "name": "Email",
+    "username": "om@example.com",
+    "url": "mailto:om@example.com",
+    "icon": "Mail",
+    "iconLibrary": "lucide"
+  },
+  {
+    "id": 4,
+    "name": "YouTube",
+    "username": "Unidentified_Coder",
+    "url": "https://youtube.com",
+    "icon": "FaYoutube",
+    "iconLibrary": "fa6"
+  }
+]

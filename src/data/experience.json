@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "company": "SoftSpire Solutions",
+    "role": "Backend Developer Intern",
+    "employmentType": "Internship",
+
+    "shortDescription": "Worked on backend development and contributed to the Fooddify project.",
+
+    "description": "Worked as a Backend Developer Intern, contributing to backend development, database design, APIs, and project architecture.\n\nDuring this experience, I worked on the Fooddify project and contributed to multiple modules and improvements.",
+
+    "startDate": "2026-06-01",
+    "endDate": "2026-08-31",
+
+    "location": "Remote",
+
+    "logo": "/images/experience/softspire-solutions/logo.png",
+
+    "projects": [1],
+
+    "skills": [1, 3, 5],
+
+    "technologies": [2, 3, 4],
+
+    "certificates": [1],
+    "achievements": [],
+    "competitions": []
+  },
+
+  {
+    "id": 2,
+    "company": "Sumago Infotech Pvt. Ltd.",
+    "role": "Java Full Stack Developer Intern",
+    "employmentType": "Internship",
+
+    "shortDescription": "Completed an internship focused on Java full-stack development.",
+
+    "description": "Completed a Java Full Stack Development internship, where I worked on full-stack concepts and practical software development.\n\nThe internship provided experience with backend development, frontend technologies, and software development workflows.",
+
+    "startDate": "2025-06-01",
+    "endDate": "2025-08-22",
+
+    "location": "On-site",
+
+    "logo": "/images/experience/sumago-infotech/logo.png",
+
+    "projects": [],
+
+    "skills": [1, 2],
+
+    "technologies": [],
+
+    "certificates": [2],
+    "achievements": [],
+    "competitions": []
+  }
+]

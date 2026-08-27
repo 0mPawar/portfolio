@@ -1,0 +1,68 @@
+{
+  "000": {
+    "show": true,
+    "title": "Portfolio Status Notice",
+    "description": "This portfolio is currently under development and some information may not reflect the latest updates.",
+    "notice": "The data currently displayed is dummy/sample data for development purposes. You can explore the portfolio to see the UI, layout, and available features in action.",
+    "buttonText": "Continue Anyway",
+    "type": "warning"
+  },
+
+  "001": {
+    "show": true,
+    "title": "Portfolio Maintenance Notice",
+    "description": "The portfolio is currently under maintenance and some information may not reflect the latest updates.",
+    "notice": "Some pages or features may be temporarily unavailable while improvements are being made.",
+    "buttonText": "Continue Anyway",
+    "type": "maintenance"
+  },
+
+  "010": {
+    "show": true,
+    "title": "Portfolio Under Development",
+    "description": "This portfolio is currently under active development and some information may not be up to date.",
+    "notice": "Some sections or features may change or may not work as expected while development continues.",
+    "buttonText": "Continue to Portfolio",
+    "type": "development"
+  },
+
+  "011": {
+    "show": true,
+    "title": "Development & Maintenance Notice",
+    "description": "This portfolio is currently under development and undergoing maintenance, and some information may not be up to date.",
+    "notice": "Some information, pages, or features may be incomplete or temporarily unavailable.",
+    "buttonText": "Continue Anyway",
+    "type": "maintenance"
+  },
+
+  "100": {
+    "show": false
+  },
+
+  "101": {
+    "show": true,
+    "title": "Portfolio Under Maintenance",
+    "description": "The displayed portfolio information is up to date, but the website is currently undergoing maintenance.",
+    "notice": "Some pages or features may be temporarily unavailable while improvements are being made.",
+    "buttonText": "Continue Anyway",
+    "type": "maintenance"
+  },
+
+  "110": {
+    "show": true,
+    "title": "Portfolio Development Notice",
+    "description": "The displayed portfolio information is up to date, but the website is currently under active development.",
+    "notice": "Some sections or features may change or may not work as expected while development continues.",
+    "buttonText": "Continue to Portfolio",
+    "type": "development"
+  },
+
+  "111": {
+    "show": true,
+    "title": "Development & Maintenance Notice",
+    "description": "The displayed portfolio information is up to date, but the website is currently under development and undergoing maintenance.",
+    "notice": "Some features may be incomplete, changing, or temporarily unavailable.",
+    "buttonText": "Continue Anyway",
+    "type": "maintenance"
+  }
+}
