@@ -2,7 +2,7 @@ import {
   Calendar,
   CircleDot,
   ExternalLink,
-  Code2 ,
+  Code2,
   GraduationCap,
   BriefcaseBusiness,
   FolderGit2,
@@ -14,8 +14,12 @@ import { getExperienceRoute, getEducationRoute } from "../../constants/routes";
 import experiences from "../../data/experience.json";
 import education from "../../data/education.json";
 import { getAssetUrl } from "../../utils/getAssetUrl";
+import { isValidUrl } from "../../utils/isValidUrl";
+import { useToast } from "../../hooks/useToast.jsx";
 
 function ProjectLinks({ project }) {
+  const { toast } = useToast();
+
   const relatedExperience = experiences.filter((item) =>
     item.projects?.includes(project.id)
   );
@@ -46,70 +50,103 @@ function ProjectLinks({ project }) {
     },
     {
       label: "Started",
-      value: project.startDate
-        ? formatDate(project.startDate)
-        : null,
+      value: project.startDate ? formatDate(project.startDate) : null,
       icon: Calendar,
     },
   ].filter((item) => item.value);
 
-  const hasLinks =
-    project.githubUrl ||
-    project.liveUrl ||
-    project.demoUrl ||
-    project.documentationUrl;
+  /**
+   * Returns props for a link button.
+   * If url is valid  → real external link behaviour.
+   * If url is absent → prevent navigation, fire toast.
+   */
+  const linkButtonProps = (url, toastMessage) => {
+    if (isValidUrl(url)) {
+      return {
+        href: url,
+        target: "_blank",
+        rel: "noreferrer",
+        "aria-disabled": false,
+      };
+    }
+
+    return {
+      href: "#",
+      "aria-disabled": true,
+      onClick: (event) => {
+        event.preventDefault();
+        toast({ message: toastMessage, type: "info" });
+      },
+    };
+  };
+
+  const unavailableCls = "opacity-50 cursor-not-allowed";
 
   return (
     <div className="space-y-6">
-      {/* Project Links */}
-      {hasLinks && (
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-white/10 dark:bg-white/[0.03]">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-            Project Links
-          </h3>
+      {/* Project Links — always rendered */}
+      <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-white/10 dark:bg-white/[0.03]">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+          Project Links
+        </h3>
 
-          <div className="mt-4 space-y-2">
-            {/* GitHub */}
-            {project.githubUrl && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-between rounded-xl border border-gray-200 px-4 py-3 text-sm font-medium text-gray-700 transition hover:border-gray-300 hover:bg-gray-50 dark:border-white/10 dark:text-gray-200 dark:hover:bg-white/5"
-              >
-                <span className="flex items-center gap-3">
-                  <Code2  size={18} />
-                  View Source Code
-                </span>
-
-                <ExternalLink size={16} />
-              </a>
+        <div className="mt-4 space-y-2">
+          {/* GitHub */}
+          <a
+            {...linkButtonProps(
+              project.githubUrl,
+              "GitHub repository is not available for this project."
             )}
+            className={`flex items-center justify-between rounded-xl border border-gray-200 px-4 py-3 text-sm font-medium text-gray-700 transition hover:border-gray-300 hover:bg-gray-50 dark:border-white/10 dark:text-gray-200 dark:hover:bg-white/5${!isValidUrl(project.githubUrl) ? ` ${unavailableCls}` : ""
+              }`}
+          >
+            <span className="flex items-center gap-3">
+              <Code2 size={18} />
+              View Source Code
+            </span>
 
-            {/* Live Project */}
-            {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-between rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 text-sm font-medium text-blue-700 transition hover:bg-blue-100 dark:border-blue-500/20 dark:bg-blue-500/10 dark:text-blue-300 dark:hover:bg-blue-500/20"
-              >
-                <span className="flex items-center gap-3">
-                  <Globe size={18} />
-                  View Live Project
-                </span>
+            <ExternalLink size={16} />
+          </a>
 
-                <ExternalLink size={16} />
-              </a>
+          {/* Live Project */}
+          <a
+            {...linkButtonProps(
+              project.liveUrl,
+              "Live demo is not available for this project."
             )}
+            className={`flex items-center justify-between rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 text-sm font-medium text-blue-700 transition hover:bg-blue-100 dark:border-blue-500/20 dark:bg-blue-500/10 dark:text-blue-300 dark:hover:bg-blue-500/20${!isValidUrl(project.liveUrl) ? ` ${unavailableCls}` : ""
+              }`}
+          >
+            <span className="flex items-center gap-3">
+              <Globe size={18} />
+              View Live Project
+            </span>
 
-            {/* Demo */}
-            {project.demoUrl && (
+            <ExternalLink size={16} />
+          </a>
+
+          {/* Demo */}
+          {(() => {
+            const validDemo = isValidUrl(project.demoUrl);
+            return (
               <a
-                href={getAssetUrl(project.demoUrl)}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-between rounded-xl border border-gray-200 px-4 py-3 text-sm font-medium text-gray-700 transition hover:border-gray-300 hover:bg-gray-50 dark:border-white/10 dark:text-gray-200 dark:hover:bg-white/5"
+                href={validDemo ? getAssetUrl(project.demoUrl) : "#"}
+                target={validDemo ? "_blank" : undefined}
+                rel={validDemo ? "noreferrer" : undefined}
+                aria-disabled={!validDemo}
+                onClick={
+                  !validDemo
+                    ? (e) => {
+                      e.preventDefault();
+                      toast({
+                        message: "Live demo is not available for this project.",
+                        type: "info",
+                      });
+                    }
+                    : undefined
+                }
+                className={`flex items-center justify-between rounded-xl border border-gray-200 px-4 py-3 text-sm font-medium text-gray-700 transition hover:border-gray-300 hover:bg-gray-50 dark:border-white/10 dark:text-gray-200 dark:hover:bg-white/5${!validDemo ? ` ${unavailableCls}` : ""
+                  }`}
               >
                 <span className="flex items-center gap-3">
                   <ExternalLink size={18} />
@@ -118,15 +155,32 @@ function ProjectLinks({ project }) {
 
                 <ExternalLink size={16} />
               </a>
-            )}
+            );
+          })()}
 
-            {/* Documentation */}
-            {project.documentationUrl && (
+          {/* Documentation */}
+          {(() => {
+            const validDoc = isValidUrl(project.documentationUrl);
+            return (
               <a
-                href={getAssetUrl(project.documentationUrl)}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-between rounded-xl border border-gray-200 px-4 py-3 text-sm font-medium text-gray-700 transition hover:border-gray-300 hover:bg-gray-50 dark:border-white/10 dark:text-gray-200 dark:hover:bg-white/5"
+                href={validDoc ? getAssetUrl(project.documentationUrl) : "#"}
+                target={validDoc ? "_blank" : undefined}
+                rel={validDoc ? "noreferrer" : undefined}
+                aria-disabled={!validDoc}
+                onClick={
+                  !validDoc
+                    ? (e) => {
+                      e.preventDefault();
+                      toast({
+                        message:
+                          "Documentation is not available for this project.",
+                        type: "info",
+                      });
+                    }
+                    : undefined
+                }
+                className={`flex items-center justify-between rounded-xl border border-gray-200 px-4 py-3 text-sm font-medium text-gray-700 transition hover:border-gray-300 hover:bg-gray-50 dark:border-white/10 dark:text-gray-200 dark:hover:bg-white/5${!validDoc ? ` ${unavailableCls}` : ""
+                  }`}
               >
                 <span className="flex items-center gap-3">
                   <FolderGit2 size={18} />
@@ -135,10 +189,10 @@ function ProjectLinks({ project }) {
 
                 <ExternalLink size={16} />
               </a>
-            )}
-          </div>
+            );
+          })()}
         </div>
-      )}
+      </div>
 
       {/* Project Information */}
       {infoItems.length > 0 && (
@@ -152,10 +206,7 @@ function ProjectLinks({ project }) {
               const Icon = item.icon;
 
               return (
-                <div
-                  key={item.label}
-                  className="flex items-start gap-3"
-                >
+                <div key={item.label} className="flex items-start gap-3">
                   <div className="mt-0.5 text-gray-400 dark:text-gray-500">
                     <Icon size={18} />
                   </div>

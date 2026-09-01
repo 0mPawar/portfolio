@@ -4,22 +4,29 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 import PortfolioStatusAlert from "../common/PortfolioStatusAlert.jsx";
+import { ToastProvider } from "../../hooks/useToast.jsx";
+import ToastContainer from "../common/Toast.jsx";
 
 function MainLayout() {
   return (
-    <div className="flex min-h-screen flex-col">
-      <ScrollToTop />
+    <ToastProvider>
+      <div className="flex min-h-screen flex-col">
+        <ScrollToTop />
 
-      <PortfolioStatusAlert />
+        <PortfolioStatusAlert />
 
-      <Navbar />
+        <Navbar />
 
-      <main className="flex-1">
-        <Outlet />
-      </main>
+        <main className="flex-1">
+          <Outlet />
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+
+        {/* Global toast container */}
+        <ToastContainer />
+      </div>
+    </ToastProvider>
   );
 }
 

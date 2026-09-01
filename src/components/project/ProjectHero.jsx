@@ -9,8 +9,11 @@ import {
 import Button from "../common/BackButton";
 import { ROUTES } from "../../constants/routes";
 import { getAssetUrl } from "../../utils/getAssetUrl";
+import { isValidUrl } from "../../utils/isValidUrl";
+import { useToast } from "../../hooks/useToast.jsx";
 
 function ProjectHero({ project }) {
+  const { toast } = useToast();
   const formatDate = (date) => {
     if (!date) return "Present";
 
@@ -113,18 +116,31 @@ function ProjectHero({ project }) {
                 </span>
               )}
 
-              {/* Live Link */}
-              {project.liveUrl && (
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 font-medium text-blue-600 transition hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
-                >
-                  View Live Project
-                  <ExternalLink size={15} />
-                </a>
-              )}
+              {/* Live Link — always rendered */}
+              <a
+                href={isValidUrl(project.liveUrl) ? project.liveUrl : "#"}
+                target={isValidUrl(project.liveUrl) ? "_blank" : undefined}
+                rel={isValidUrl(project.liveUrl) ? "noreferrer" : undefined}
+                aria-disabled={!isValidUrl(project.liveUrl)}
+                onClick={
+                  !isValidUrl(project.liveUrl)
+                    ? (e) => {
+                      e.preventDefault();
+                      toast({
+                        message: "Live demo is not available for this project.",
+                        type: "info",
+                      });
+                    }
+                    : undefined
+                }
+                className={`inline-flex items-center gap-2 font-medium text-blue-600 transition hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300${!isValidUrl(project.liveUrl)
+                    ? " opacity-50 cursor-not-allowed"
+                    : ""
+                  }`}
+              >
+                View Live Project
+                <ExternalLink size={15} />
+              </a>
             </div>
           </div>
         </div>

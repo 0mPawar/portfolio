@@ -12,8 +12,11 @@ import technologies from "../../data/technologies.json";
 import { getByIds } from "../../utils/relations/getByIds";
 import { getProjectRoute } from "../../constants/routes";
 import { getAssetUrl } from "../../utils/getAssetUrl";
+import { isValidUrl } from "../../utils/isValidUrl";
+import { useToast } from "../../hooks/useToast.jsx";
 
 function ProjectCard({ project }) {
+  const { toast } = useToast();
   const projectTechnologies = getByIds(
     technologies,
     project.technologies
@@ -123,37 +126,57 @@ function ProjectCard({ project }) {
             </span>
           </div>
 
-          {/* External Links */}
+          {/* External Links — always visible */}
           <div className="flex items-center gap-2">
-            {project.githubUrl && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`${project.name} GitHub repository`}
-                className="rounded-md p-1.5 text-gray-500 transition hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-white"
-                onClick={(event) => event.stopPropagation()}
-              >
-                <Icon
-                  name={project.icon || "FaGithub"}
-                  type={project.iconLibrary || "fa6"}
-                  size={17}
-                />
-              </a>
-            )}
+            {/* GitHub */}
+            <a
+              href={isValidUrl(project.githubUrl) ? project.githubUrl : "#"}
+              target={isValidUrl(project.githubUrl) ? "_blank" : undefined}
+              rel={isValidUrl(project.githubUrl) ? "noreferrer" : undefined}
+              aria-label={`${project.name} GitHub repository`}
+              aria-disabled={!isValidUrl(project.githubUrl)}
+              className={`rounded-md p-1.5 text-gray-500 transition hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-white${!isValidUrl(project.githubUrl) ? " opacity-40 cursor-not-allowed" : ""
+                }`}
+              onClick={(event) => {
+                event.stopPropagation();
+                if (!isValidUrl(project.githubUrl)) {
+                  event.preventDefault();
+                  toast({
+                    message: "GitHub repository is not available for this project.",
+                    type: "info",
+                  });
+                }
+              }}
+            >
+              <Icon
+                name={project.icon || "FaGithub"}
+                type={project.iconLibrary || "fa6"}
+                size={17}
+              />
+            </a>
 
-            {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`Open ${project.name}`}
-                className="rounded-md p-1.5 text-gray-500 transition hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-white"
-                onClick={(event) => event.stopPropagation()}
-              >
-                <ExternalLink size={17} />
-              </a>
-            )}
+            {/* Live URL */}
+            <a
+              href={isValidUrl(project.liveUrl) ? project.liveUrl : "#"}
+              target={isValidUrl(project.liveUrl) ? "_blank" : undefined}
+              rel={isValidUrl(project.liveUrl) ? "noreferrer" : undefined}
+              aria-label={`Open ${project.name}`}
+              aria-disabled={!isValidUrl(project.liveUrl)}
+              className={`rounded-md p-1.5 text-gray-500 transition hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-white${!isValidUrl(project.liveUrl) ? " opacity-40 cursor-not-allowed" : ""
+                }`}
+              onClick={(event) => {
+                event.stopPropagation();
+                if (!isValidUrl(project.liveUrl)) {
+                  event.preventDefault();
+                  toast({
+                    message: "Live demo is not available for this project.",
+                    type: "info",
+                  });
+                }
+              }}
+            >
+              <ExternalLink size={17} />
+            </a>
           </div>
         </div>
       </div>
