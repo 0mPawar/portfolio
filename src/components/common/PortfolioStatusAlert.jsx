@@ -1,43 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AlertTriangle, CalendarDays, Info, Wrench, X } from "lucide-react";
 
 import { APP_CONFIG } from "../../constants/appConfig";
-import portfolioStatus from "../../data/portfolioStatus.json";
-import formatDate from "../../utils/formatDate";
+import getPortfolioStatus from "../../utils/getPortfolioStatus";
 
 function PortfolioStatusAlert() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  /*
-    Create a unique key from the three status values.
-
-    Example:
-
-    isDataUpdated: true
-    isUnderDevelopment: false
-    isUnderMaintenance: false
-
-    Result:
-    "100"
-  */
-  const statusKey = [
-    APP_CONFIG.isDataUpdated,
-    APP_CONFIG.isUnderDevelopment,
-    APP_CONFIG.isUnderMaintenance,
-  ]
-    .map((value) => (value ? "1" : "0"))
-    .join("");
-
-  // Get the matching status configuration from JSON.
-  const status = portfolioStatus[statusKey];
-
-  useEffect(() => {
-    // Only open the alert when the current status
-    // is configured to be shown.
-    if (status?.show) {
-      setIsOpen(true);
-    }
-  }, [status]);
+  const status = getPortfolioStatus();
+  const [isOpen, setIsOpen] = useState(() => Boolean(status?.show));
 
   // Do not render anything for normal status
   // or if the alert has been closed.
@@ -141,7 +110,7 @@ function PortfolioStatusAlert() {
               </p>
 
               <p className="mt-1 font-semibold text-gray-200">
-                {formatDate(APP_CONFIG.lastUpdated)}
+                {APP_CONFIG.lastUpdated}
               </p>
             </div>
           </div>

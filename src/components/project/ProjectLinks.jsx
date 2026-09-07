@@ -15,7 +15,7 @@ import experiences from "../../data/experience.json";
 import education from "../../data/education.json";
 import { getAssetUrl } from "../../utils/getAssetUrl";
 import { isValidUrl } from "../../utils/isValidUrl";
-import { useToast } from "../../hooks/useToast.jsx";
+import { useToast } from "../../hooks/useToast";
 
 function ProjectLinks({ project }) {
   const { toast } = useToast();

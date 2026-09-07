@@ -13,7 +13,7 @@ import { getByIds } from "../../utils/relations/getByIds";
 import { getProjectRoute } from "../../constants/routes";
 import { getAssetUrl } from "../../utils/getAssetUrl";
 import { isValidUrl } from "../../utils/isValidUrl";
-import { useToast } from "../../hooks/useToast.jsx";
+import { useToast } from "../../hooks/useToast";
 
 function ProjectCard({ project }) {
   const { toast } = useToast();

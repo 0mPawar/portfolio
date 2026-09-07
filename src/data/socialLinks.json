@@ -11,15 +11,15 @@
     "id": 2,
     "name": "LinkedIn",
     "username": "ompawar17",
-    "url": "https://linkedin.com/in/ompawar17",
+    "url": "https://www.linkedin.com/in/ompawar17",
     "icon": "FaLinkedin",
     "iconLibrary": "fa6"
   },
   {
     "id": 3,
     "name": "Email",
-    "username": "om@example.com",
-    "url": "mailto:om@example.com",
+    "username": "pawar.odmt@gmail.com",
+    "url": "mailto:pawar.odmt@gmail.com",
     "icon": "Mail",
     "iconLibrary": "lucide"
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "name": "YouTube",
     "username": "Unidentified_Coder",
-    "url": "https://youtube.com",
+    "url": "https://www.youtube.com/@Unidentified_Coder",
     "icon": "FaYoutube",
     "iconLibrary": "fa6"
   }

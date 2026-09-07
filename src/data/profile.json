@@ -1,8 +1,8 @@
 {
   "tagline": "Building practical, scalable and user-focused digital experiences.",
   "shortBio": "A passionate developer interested in full stack web development, backend systems, Android development and technology.",
-  "email": "om@example.com",
-  "phone": "+91 9000000000",
+  "email": "pawar.odmt@gmail.com",
+  "phone": "+91 9420104142",
   "location": "Maharashtra, India",
   "profileImage": "/images/profile/profile.jpg",
   "resume": "/documents/resume.pdf",
@@ -27,8 +27,6 @@
     "Android Development",
     "Game Development",
     "Embedded Systems",
-    "Robotics",
-    "3D Graphics",
-    "VFX"
+    "Robotics"
   ]
 }

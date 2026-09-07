@@ -3,56 +3,70 @@
     "id": 1,
     "name": "Backend Development",
     "category": "Development",
-    "description": "Building server-side applications, APIs and backend systems.",
+    "description": "Building server-side applications, business logic, APIs, and backend systems.",
     "icon": "Server"
   },
   {
     "id": 2,
     "name": "Frontend Development",
     "category": "Development",
-    "description": "Building responsive and interactive user interfaces.",
+    "description": "Building responsive, interactive, and user-friendly web interfaces.",
     "icon": "Monitor"
   },
   {
     "id": 3,
-    "name": "Database Design",
-    "category": "Backend",
-    "description": "Designing and managing relational databases.",
-    "icon": "Database"
+    "name": "Full-Stack Development",
+    "category": "Development",
+    "description": "Developing complete web applications across frontend, backend, APIs, and databases.",
+    "icon": "Layers"
   },
   {
     "id": 4,
-    "name": "API Development",
-    "category": "Backend",
-    "description": "Designing and developing REST APIs.",
-    "icon": "Network"
-  },
-  {
-    "id": 5,
-    "name": "Authentication & Authorization",
-    "category": "Backend",
-    "description": "Implementing secure authentication and role-based access.",
-    "icon": "ShieldCheck"
-  },
-  {
-    "id": 6,
     "name": "Android Development",
     "category": "Mobile",
-    "description": "Building Android applications using modern Android technologies.",
+    "description": "Building Android applications using Kotlin, Jetpack Compose, and modern Android development practices.",
     "icon": "Smartphone"
   },
   {
+    "id": 5,
+    "name": "REST API Development",
+    "category": "Backend",
+    "description": "Designing and developing RESTful APIs for communication between applications and services.",
+    "icon": "Network"
+  },
+  {
+    "id": 6,
+    "name": "Database Design",
+    "category": "Backend",
+    "description": "Designing, managing, and working with relational databases and structured data models.",
+    "icon": "Database"
+  },
+  {
     "id": 7,
-    "name": "Version Control",
-    "category": "Tools",
-    "description": "Managing source code and collaborative development workflows.",
-    "icon": "GitBranch"
+    "name": "Authentication & Authorization",
+    "category": "Backend",
+    "description": "Implementing secure authentication, authorization, JWT-based access, and role-based permissions.",
+    "icon": "ShieldCheck"
   },
   {
     "id": 8,
-    "name": "UI Development",
+    "name": "API Integration",
+    "category": "Development",
+    "description": "Integrating external and internal APIs to connect applications with services and data.",
+    "icon": "Plug"
+  },
+  {
+    "id": 9,
+    "name": "Responsive Web Development",
     "category": "Frontend",
-    "description": "Creating reusable and responsive interface components.",
-    "icon": "Layout"
+    "description": "Creating web applications that provide a consistent and usable experience across different screen sizes.",
+    "icon": "MonitorSmartphone"
+  },
+  {
+    "id": 10,
+    "name": "Web Development",
+    "category": "Development",
+    "description": "Developing modern websites and web applications using frontend and backend technologies.",
+    "icon": "Globe"
   }
 ]

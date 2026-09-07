@@ -10,7 +10,7 @@ import Button from "../common/BackButton";
 import { ROUTES } from "../../constants/routes";
 import { getAssetUrl } from "../../utils/getAssetUrl";
 import { isValidUrl } from "../../utils/isValidUrl";
-import { useToast } from "../../hooks/useToast.jsx";
+import { useToast } from "../../hooks/useToast";
 
 function ProjectHero({ project }) {
   const { toast } = useToast();

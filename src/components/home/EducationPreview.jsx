@@ -5,9 +5,11 @@ import education from "../../data/education.json";
 import { ROUTES } from "../../constants/routes";
 
 function EducationPreview() {
-  const latestEducation = education[0];
+  const currentEducation = education.find(
+    (item) => item.current === true
+  );
 
-  if (!latestEducation) {
+  if (!currentEducation) {
     return null;
   }
 
@@ -36,16 +38,16 @@ function EducationPreview() {
 
             <div className="mt-6 rounded-2xl border border-white/10 bg-[#0d1420] p-6">
               <h3 className="text-xl font-bold text-white">
-                {latestEducation.degree}
+                {currentEducation.degree}
               </h3>
 
               <p className="mt-2 text-blue-400">
-                {latestEducation.institution}
+                {currentEducation.institution}
               </p>
 
-              {latestEducation.field && (
+              {currentEducation.field && (
                 <p className="mt-2 text-gray-400">
-                  {latestEducation.field}
+                  {currentEducation.field}
                 </p>
               )}
 

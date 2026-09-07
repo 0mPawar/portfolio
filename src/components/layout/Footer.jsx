@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import profile from "../../data/profile.json";
 import socialLinks from "../../data/socialLinks.json";
 import navigation from "../../data/navigation.json";
-import portfolioStatus from "../../data/portfolioStatus.json";
 
 import { APP_CONFIG } from "../../constants/appConfig";
-import formatDate from "../../utils/formatDate";
+import getPortfolioStatus from "../../utils/getPortfolioStatus";
 
 import Icon from "../common/Icon";
 
@@ -16,21 +15,7 @@ function Footer() {
     ...navigation.moreNavigation,
   ];
 
-  const formattedDate = formatDate(APP_CONFIG.lastUpdated, {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-  });
-
-  const statusKey = [
-    APP_CONFIG.isDataUpdated,
-    APP_CONFIG.isUnderDevelopment,
-    APP_CONFIG.isUnderMaintenance,
-  ]
-    .map((value) => (value ? "1" : "0"))
-    .join("");
-
-  const currentStatus = portfolioStatus[statusKey];
+  const currentStatus = getPortfolioStatus();
 
   const isPortfolioReady = !currentStatus?.show;
 
@@ -120,8 +105,7 @@ function Footer() {
         {/* Bottom */}
         <div className="mt-10 flex flex-col gap-3 border-t border-gray-200 pt-6 text-sm text-gray-500 dark:border-white/10 dark:text-gray-500 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {APP_CONFIG.copyrightYear} {APP_CONFIG.name}. All rights
-            reserved.
+            © {APP_CONFIG.copyrightYear} {APP_CONFIG.name}. All rights reserved.
           </p>
 
           <div className="flex items-center gap-2">
@@ -132,7 +116,7 @@ function Footer() {
               aria-hidden="true"
             />
 
-            <span>Last updated: {formattedDate}</span>
+            <span>Last updated: {APP_CONFIG.lastUpdated}</span>
           </div>
         </div>
       </div>

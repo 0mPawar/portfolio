@@ -1,5 +1,5 @@
 import { Info, X } from "lucide-react";
-import { useToast } from "../../hooks/useToast.jsx";
+import { useToast } from "../../hooks/useToast";
 
 /**
  * ToastContainer — place once inside MainLayout.
