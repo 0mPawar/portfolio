@@ -1,4 +1,5 @@
 import { Calendar, FolderKanban, UserRound } from "lucide-react";
+import { formatDateRange } from "../../utils/formatDate";
 
 function ProjectOverview({ project }) {
   const formatDate = (date) => {
@@ -28,11 +29,7 @@ function ProjectOverview({ project }) {
     },
     {
       label: "Duration",
-      value: project.startDate
-        ? `${formatDate(project.startDate)} — ${formatDate(
-            project.endDate
-          )}`
-        : null,
+      value: formatDateRange(project.startDate, project.endDate, formatDate),
       icon: Calendar,
     },
   ].filter((item) => item.value);

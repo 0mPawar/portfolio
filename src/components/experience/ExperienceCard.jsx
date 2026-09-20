@@ -8,6 +8,7 @@ import {
 
 import { getExperienceRoute } from "../../constants/routes";
 import { getAssetUrl } from "../../utils/getAssetUrl";
+import { formatDateRange } from "../../utils/formatDate";
 
 function ExperienceCard({ experience }) {
   const formatDate = (date) => {
@@ -20,21 +21,15 @@ function ExperienceCard({ experience }) {
   };
 
   const getDuration = () => {
-    if (!experience.startDate) return null;
-
-    const start = formatDate(experience.startDate);
-    const end = experience.current
-      ? "Present"
-      : formatDate(experience.endDate);
-
-    return `${start} — ${end}`;
+    return formatDateRange(
+      experience.startDate,
+      experience.endDate,
+      formatDate,
+    );
   };
 
   return (
-    <Link
-      to={getExperienceRoute(experience.id)}
-      className="group block"
-    >
+    <Link to={getExperienceRoute(experience.id)} className="group block">
       <article className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-blue-500/30">
         {/* Top subtle accent */}
         <div className="absolute inset-x-0 top-0 h-1 bg-blue-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -50,10 +45,7 @@ function ExperienceCard({ experience }) {
                 className="h-full w-full object-contain p-2"
               />
             ) : (
-              <BriefcaseBusiness
-                size={24}
-                className="text-gray-400"
-              />
+              <BriefcaseBusiness size={24} className="text-gray-400" />
             )}
           </div>
 

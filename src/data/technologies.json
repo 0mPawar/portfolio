@@ -1,198 +1,185 @@
 [
   {
     "id": 1,
-    "name": "JavaScript",
-    "category": "Language",
-    "icon": "SiJavascript",
-    "logo": "/images/technologies/javascript.png"
-  },
-  {
-    "id": 2,
-    "name": "Python",
-    "category": "Language",
-    "icon": "SiPython",
-    "logo": "/images/technologies/python.png"
-  },
-  {
-    "id": 3,
-    "name": "Java",
-    "category": "Language",
-    "icon": "SiOpenjdk",
-    "logo": "/images/technologies/java.png"
-  },
-  {
-    "id": 4,
-    "name": "Kotlin",
-    "category": "Language",
-    "icon": "SiKotlin",
-    "logo": "/images/technologies/kotlin.png"
-  },
-  {
-    "id": 5,
-    "name": "C",
-    "category": "Language",
-    "icon": "SiC",
-    "logo": "/images/technologies/c.png"
-  },
-  {
-    "id": 6,
-    "name": "C++",
-    "category": "Language",
-    "icon": "SiCplusplus",
-    "logo": "/images/technologies/cpp.png"
-  },
-  {
-    "id": 7,
-    "name": "HTML5",
-    "category": "Markup",
-    "icon": "SiHtml5",
-    "logo": "/images/technologies/html5.png"
-  },
-  {
-    "id": 8,
-    "name": "CSS3",
-    "category": "Styling",
-    "icon": "SiCss3",
-    "logo": "/images/technologies/css3.png"
-  },
-  {
-    "id": 9,
-    "name": "React",
-    "category": "Frontend Framework",
-    "icon": "SiReact",
-    "logo": "/images/technologies/react.png"
-  },
-  {
-    "id": 10,
-    "name": "Node.js",
-    "category": "Backend Runtime",
-    "icon": "SiNodedotjs",
-    "logo": "/images/technologies/nodejs.png"
-  },
-  {
-    "id": 11,
-    "name": "Spring Boot",
-    "category": "Backend Framework",
-    "icon": "SiSpringboot",
-    "logo": "/images/technologies/spring-boot.png"
-  },
-  {
-    "id": 12,
-    "name": "Tailwind CSS",
-    "category": "CSS Framework",
-    "icon": "SiTailwindcss",
-    "logo": "/images/technologies/tailwind.png"
-  },
-  {
-    "id": 13,
-    "name": "Bootstrap",
-    "category": "CSS Framework",
-    "icon": "SiBootstrap",
-    "logo": "/images/technologies/bootstrap.png"
-  },
-  {
-    "id": 14,
-    "name": "Material UI",
-    "category": "UI Framework",
-    "icon": "SiMui",
-    "logo": "/images/technologies/material-ui.png"
-  },
-  {
-    "id": 15,
-    "name": "Jetpack Compose",
-    "category": "Android UI",
-    "icon": "SiJetpackcompose",
-    "logo": "/images/technologies/jetpack-compose.png"
-  },
-  {
-    "id": 16,
     "name": "Android",
     "category": "Mobile Development",
     "icon": "SiAndroid",
     "logo": "/images/technologies/android.png"
   },
   {
-    "id": 17,
-    "name": "MySQL",
-    "category": "Database",
-    "icon": "SiMysql",
-    "logo": "/images/technologies/mysql.png"
+    "id": 2,
+    "name": "Bootstrap",
+    "category": "CSS Framework",
+    "icon": "SiBootstrap",
+    "logo": "/images/technologies/bootstrap.png"
   },
   {
-    "id": 18,
+    "id": 3,
+    "name": "C",
+    "category": "Language",
+    "icon": "SiC",
+    "logo": "/images/technologies/c.png"
+  },
+  {
+    "id": 4,
+    "name": "C++",
+    "category": "Language",
+    "icon": "SiCplusplus",
+    "logo": "/images/technologies/cpp.png"
+  },
+  {
+    "id": 5,
+    "name": "CSS3",
+    "category": "Styling",
+    "icon": "SiCss3",
+    "logo": "/images/technologies/css3.png"
+  },
+  {
+    "id": 6,
     "name": "Firebase",
     "category": "Backend / Cloud Platform",
     "icon": "SiFirebase",
     "logo": "/images/technologies/firebase.png"
   },
   {
-    "id": 19,
+    "id": 7,
     "name": "Git",
     "category": "Version Control",
     "icon": "SiGit",
     "logo": "/images/technologies/git.png"
   },
   {
-    "id": 20,
+    "id": 8,
     "name": "GitHub",
     "category": "Code Hosting",
     "icon": "SiGithub",
     "logo": "/images/technologies/github.png"
   },
   {
-    "id": 21,
-    "name": "Vite",
-    "category": "Build Tool",
-    "icon": "SiVite",
-    "logo": "/images/technologies/vite.png"
+    "id": 9,
+    "name": "HTML5",
+    "category": "Markup",
+    "icon": "SiHtml5",
+    "logo": "/images/technologies/html5.png"
   },
   {
-    "id": 22,
+    "id": 10,
+    "name": "Java",
+    "category": "Language",
+    "icon": "SiOpenjdk",
+    "logo": "/images/technologies/java.png"
+  },
+  {
+    "id": 11,
+    "name": "JavaScript",
+    "category": "Language",
+    "icon": "SiJavascript",
+    "logo": "/images/technologies/javascript.png"
+  },
+  {
+    "id": 12,
+    "name": "Jetpack Compose",
+    "category": "Android UI",
+    "icon": "SiJetpackcompose",
+    "logo": "/images/technologies/jetpack-compose.png"
+  },
+  {
+    "id": 13,
+    "name": "JWT",
+    "category": "Authentication",
+    "icon": "SiJsonwebtokens",
+    "logo": "/images/technologies/jwt.png"
+  },
+  {
+    "id": 14,
+    "name": "Kotlin",
+    "category": "Language",
+    "icon": "SiKotlin",
+    "logo": "/images/technologies/kotlin.png"
+  },
+  {
+    "id": 15,
+    "name": "Material UI",
+    "category": "UI Framework",
+    "icon": "SiMui",
+    "logo": "/images/technologies/material-ui.png"
+  },
+  {
+    "id": 16,
+    "name": "MySQL",
+    "category": "Database",
+    "icon": "SiMysql",
+    "logo": "/images/technologies/mysql.png"
+  },
+  {
+    "id": 17,
+    "name": "Node.js",
+    "category": "Backend Runtime",
+    "icon": "SiNodedotjs",
+    "logo": "/images/technologies/nodejs.png"
+  },
+  {
+    "id": 18,
     "name": "NPM",
     "category": "Package Manager",
     "icon": "SiNpm",
     "logo": "/images/technologies/npm.png"
   },
   {
-    "id": 23,
+    "id": 19,
     "name": "Postman",
     "category": "API Testing",
     "icon": "SiPostman",
     "logo": "/images/technologies/postman.png"
   },
   {
-    "id": 24,
+    "id": 20,
+    "name": "Python",
+    "category": "Language",
+    "icon": "SiPython",
+    "logo": "/images/technologies/python.png"
+  },
+  {
+    "id": 21,
+    "name": "React",
+    "category": "Frontend Framework",
+    "icon": "SiReact",
+    "logo": "/images/technologies/react.png"
+  },
+  {
+    "id": 22,
     "name": "REST API",
     "category": "API",
     "icon": "SiOpenapiinitiative",
     "logo": "/images/technologies/rest-api.png"
   },
   {
+    "id": 23,
+    "name": "Spring Boot",
+    "category": "Backend Framework",
+    "icon": "SiSpringboot",
+    "logo": "/images/technologies/spring-boot.png"
+  },
+  {
+    "id": 24,
+    "name": "Tailwind CSS",
+    "category": "CSS Framework",
+    "icon": "SiTailwindcss",
+    "logo": "/images/technologies/tailwind.png"
+  },
+  {
     "id": 25,
-    "name": "Figma",
-    "category": "Design Tool",
-    "icon": "SiFigma",
-    "logo": "/images/technologies/figma.png"
+    "name": "Vite",
+    "category": "Build Tool",
+    "icon": "SiVite",
+    "logo": "/images/technologies/vite.png"
   },
+
   {
-    "id": 26,
-    "name": "ESLint",
-    "category": "Code Quality",
-    "icon": "SiEslint",
-    "logo": "/images/technologies/eslint.png"
-  },
-  {
-    "id": 27,
-    "name": "Prettier",
-    "category": "Code Formatting",
-    "icon": "SiPrettier",
-    "logo": "/images/technologies/prettier.png"
-  },
-  {
-    "id": 28,
-    "name": "JWT",
-    "category": "Authentication",
-    "icon": "SiJsonwebtokens",
-    "logo": "/images/technologies/jwt.png"
+    "id": 101,
+    "name": "PHP",
+    "category": "Language",
+    "icon": "SiPhp",
+    "logo": "/images/technologies/php.png"
   }
 ]

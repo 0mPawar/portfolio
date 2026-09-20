@@ -6,6 +6,7 @@ import FeaturedSkills from "../../components/home/FeaturedSkills";
 import FeaturedExperience from "../../components/home/FeaturedExperience";
 import EducationPreview from "../../components/home/EducationPreview";
 import FeaturedCertificates from "../../components/home/FeaturedCertificates";
+import ProjectAvailability from "../../components/home/ProjectAvailability";
 import ContactPreview from "../../components/home/ContactPreview";
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
       <FeaturedExperience />
       <EducationPreview />
       <FeaturedCertificates />
+      <ProjectAvailability />
       <ContactPreview />
     </main>
   );

@@ -1,59 +1,59 @@
 [
   {
     "id": 1,
-    "name": "Backend Development",
-    "category": "Development",
-    "description": "Building server-side applications, business logic, APIs, and backend systems.",
-    "icon": "Server"
-  },
-  {
-    "id": 2,
-    "name": "Frontend Development",
-    "category": "Development",
-    "description": "Building responsive, interactive, and user-friendly web interfaces.",
-    "icon": "Monitor"
-  },
-  {
-    "id": 3,
-    "name": "Full-Stack Development",
-    "category": "Development",
-    "description": "Developing complete web applications across frontend, backend, APIs, and databases.",
-    "icon": "Layers"
-  },
-  {
-    "id": 4,
     "name": "Android Development",
     "category": "Mobile",
     "description": "Building Android applications using Kotlin, Jetpack Compose, and modern Android development practices.",
     "icon": "Smartphone"
   },
   {
-    "id": 5,
-    "name": "REST API Development",
-    "category": "Backend",
-    "description": "Designing and developing RESTful APIs for communication between applications and services.",
-    "icon": "Network"
+    "id": 2,
+    "name": "API Integration",
+    "category": "Development",
+    "description": "Integrating external and internal APIs to connect applications with services and data.",
+    "icon": "Plug"
   },
   {
-    "id": 6,
-    "name": "Database Design",
-    "category": "Backend",
-    "description": "Designing, managing, and working with relational databases and structured data models.",
-    "icon": "Database"
-  },
-  {
-    "id": 7,
+    "id": 3,
     "name": "Authentication & Authorization",
     "category": "Backend",
     "description": "Implementing secure authentication, authorization, JWT-based access, and role-based permissions.",
     "icon": "ShieldCheck"
   },
   {
-    "id": 8,
-    "name": "API Integration",
+    "id": 4,
+    "name": "Backend Development",
     "category": "Development",
-    "description": "Integrating external and internal APIs to connect applications with services and data.",
-    "icon": "Plug"
+    "description": "Building server-side applications, business logic, APIs, and backend systems.",
+    "icon": "Server"
+  },
+  {
+    "id": 5,
+    "name": "Database Design",
+    "category": "Backend",
+    "description": "Designing, managing, and working with relational databases and structured data models.",
+    "icon": "Database"
+  },
+  {
+    "id": 6,
+    "name": "Frontend Development",
+    "category": "Development",
+    "description": "Building responsive, interactive, and user-friendly web interfaces.",
+    "icon": "Monitor"
+  },
+  {
+    "id": 7,
+    "name": "Full-Stack Development",
+    "category": "Development",
+    "description": "Developing complete web applications across frontend, backend, APIs, and databases.",
+    "icon": "Layers"
+  },
+  {
+    "id": 8,
+    "name": "REST API Development",
+    "category": "Backend",
+    "description": "Designing and developing RESTful APIs for communication between applications and services.",
+    "icon": "Network"
   },
   {
     "id": 9,
@@ -61,12 +61,5 @@
     "category": "Frontend",
     "description": "Creating web applications that provide a consistent and usable experience across different screen sizes.",
     "icon": "MonitorSmartphone"
-  },
-  {
-    "id": 10,
-    "name": "Web Development",
-    "category": "Development",
-    "description": "Developing modern websites and web applications using frontend and backend technologies.",
-    "icon": "Globe"
   }
 ]

@@ -1,10 +1,5 @@
 import { Link } from "react-router-dom";
-import {
-  ArrowUpRight,
-  Calendar,
-  ExternalLink,
-  Star,
-} from "lucide-react";
+import { ArrowUpRight, Calendar, ExternalLink, Star } from "lucide-react";
 
 import Icon from "../common/Icon";
 
@@ -14,12 +9,13 @@ import { getProjectRoute } from "../../constants/routes";
 import { getAssetUrl } from "../../utils/getAssetUrl";
 import { isValidUrl } from "../../utils/isValidUrl";
 import { useToast } from "../../hooks/useToast";
+import { formatDateRange } from "../../utils/formatDate";
 
 function ProjectCard({ project }) {
   const { toast } = useToast();
   const projectTechnologies = getByIds(
     technologies,
-    project.technologies
+    project.technologies,
   ).slice(0, 4);
 
   const formatDate = (date) => {
@@ -121,8 +117,7 @@ function ProjectCard({ project }) {
             <Calendar size={14} />
 
             <span>
-              {formatDate(project.startDate)} —{" "}
-              {formatDate(project.endDate)}
+              {formatDateRange(project.startDate, project.endDate, formatDate)}
             </span>
           </div>
 
@@ -135,14 +130,18 @@ function ProjectCard({ project }) {
               rel={isValidUrl(project.githubUrl) ? "noreferrer" : undefined}
               aria-label={`${project.name} GitHub repository`}
               aria-disabled={!isValidUrl(project.githubUrl)}
-              className={`rounded-md p-1.5 text-gray-500 transition hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-white${!isValidUrl(project.githubUrl) ? " opacity-40 cursor-not-allowed" : ""
-                }`}
+              className={`rounded-md p-1.5 text-gray-500 transition hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-white${
+                !isValidUrl(project.githubUrl)
+                  ? " opacity-40 cursor-not-allowed"
+                  : ""
+              }`}
               onClick={(event) => {
                 event.stopPropagation();
                 if (!isValidUrl(project.githubUrl)) {
                   event.preventDefault();
                   toast({
-                    message: "GitHub repository is not available for this project.",
+                    message:
+                      "GitHub repository is not available for this project.",
                     type: "info",
                   });
                 }
@@ -162,8 +161,11 @@ function ProjectCard({ project }) {
               rel={isValidUrl(project.liveUrl) ? "noreferrer" : undefined}
               aria-label={`Open ${project.name}`}
               aria-disabled={!isValidUrl(project.liveUrl)}
-              className={`rounded-md p-1.5 text-gray-500 transition hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-white${!isValidUrl(project.liveUrl) ? " opacity-40 cursor-not-allowed" : ""
-                }`}
+              className={`rounded-md p-1.5 text-gray-500 transition hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-white${
+                !isValidUrl(project.liveUrl)
+                  ? " opacity-40 cursor-not-allowed"
+                  : ""
+              }`}
               onClick={(event) => {
                 event.stopPropagation();
                 if (!isValidUrl(project.liveUrl)) {

@@ -1,21 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "PARAS 2K25",
-    "organizer": "Parikrama Polytechnic, Kashti",
-    "date": "2025-03-20",
-    "position": "Participant",
-    "image": "/images/competitions/paras-2k25.jpg",
-    "description": "Participated in PARAS 2K25 with a radar system project developed using Arduino Uno.",
-    "projects": [],
-    "skills": [],
-    "technologies": [],
-    "certificates": [6],
-    "achievements": [],
-    "education": [2],
-    "experience": []
-  },
-  {
     "id": 2,
     "name": "TechnoVision 2K25",
     "organizer": "SVPM's Institute of Technology & Engineering, Malegaon (Bk.)",
@@ -27,6 +11,22 @@
     "skills": [],
     "technologies": [],
     "certificates": [7],
+    "achievements": [],
+    "education": [2],
+    "experience": []
+  },
+  {
+    "id": 1,
+    "name": "PARAS 2K25",
+    "organizer": "Parikrama Polytechnic, Kashti",
+    "date": "2025-03-20",
+    "position": "Participant",
+    "image": "/images/competitions/paras-2k25.jpg",
+    "description": "Participated in PARAS 2K25 with a radar system project developed using Arduino Uno.",
+    "projects": [],
+    "skills": [],
+    "technologies": [],
+    "certificates": [6],
     "achievements": [],
     "education": [2],
     "experience": []

@@ -1,8 +1,10 @@
 import * as Icons from "lucide-react";
 
-import stats from "../../data/stats.json";
+import { getStats } from "../../utils/relations/statsRelation";
 
 function Stats() {
+  const stats = getStats();
+
   return (
     <section className="px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-5 sm:grid-cols-2 lg:grid-cols-4">

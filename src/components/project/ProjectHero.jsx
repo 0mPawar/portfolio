@@ -1,16 +1,11 @@
-import { Link } from "react-router-dom";
-import {
-  ArrowLeft,
-  Calendar,
-  Star,
-  ExternalLink,
-} from "lucide-react";
+import { ArrowLeft, Calendar, Star, ExternalLink } from "lucide-react";
 
 import Button from "../common/BackButton";
 import { ROUTES } from "../../constants/routes";
 import { getAssetUrl } from "../../utils/getAssetUrl";
 import { isValidUrl } from "../../utils/isValidUrl";
 import { useToast } from "../../hooks/useToast";
+import { formatDateRange } from "../../utils/formatDate";
 
 function ProjectHero({ project }) {
   const { toast } = useToast();
@@ -108,13 +103,14 @@ function ProjectHero({ project }) {
               )}
 
               {/* Date */}
-              {project.startDate && (
-                <span className="inline-flex items-center gap-2 text-gray-500 dark:text-gray-400">
-                  <Calendar size={16} />
-                  {formatDate(project.startDate)} —{" "}
-                  {formatDate(project.endDate)}
-                </span>
-              )}
+              <span className="inline-flex items-center gap-2 text-gray-500 dark:text-gray-400">
+                <Calendar size={16} />
+                {formatDateRange(
+                  project.startDate,
+                  project.endDate,
+                  formatDate,
+                )}
+              </span>
 
               {/* Live Link — always rendered */}
               <a
@@ -125,18 +121,20 @@ function ProjectHero({ project }) {
                 onClick={
                   !isValidUrl(project.liveUrl)
                     ? (e) => {
-                      e.preventDefault();
-                      toast({
-                        message: "Live demo is not available for this project.",
-                        type: "info",
-                      });
-                    }
+                        e.preventDefault();
+                        toast({
+                          message:
+                            "Live demo is not available for this project.",
+                          type: "info",
+                        });
+                      }
                     : undefined
                 }
-                className={`inline-flex items-center gap-2 font-medium text-blue-600 transition hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300${!isValidUrl(project.liveUrl)
+                className={`inline-flex items-center gap-2 font-medium text-blue-600 transition hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300${
+                  !isValidUrl(project.liveUrl)
                     ? " opacity-50 cursor-not-allowed"
                     : ""
-                  }`}
+                }`}
               >
                 View Live Project
                 <ExternalLink size={15} />

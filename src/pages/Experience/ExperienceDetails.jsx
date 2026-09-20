@@ -1,10 +1,5 @@
 import { useParams, Navigate } from "react-router-dom";
-import {
-  ArrowLeft,
-  BriefcaseBusiness,
-  Calendar,
-  MapPin,
-} from "lucide-react";
+import { BriefcaseBusiness, Calendar, MapPin } from "lucide-react";
 
 import experiences from "../../data/experience.json";
 
@@ -14,13 +9,12 @@ import ExperienceProjects from "../../components/experience/ExperienceProjects";
 
 import { ROUTES } from "../../constants/routes";
 import { getAssetUrl } from "../../utils/getAssetUrl";
+import { formatDateRange } from "../../utils/formatDate";
 
 function ExperienceDetails() {
   const { id } = useParams();
 
-  const experience = experiences.find(
-    (item) => String(item.id) === String(id)
-  );
+  const experience = experiences.find((item) => String(item.id) === String(id));
 
   if (!experience) {
     return <Navigate to={ROUTES.NOT_FOUND} replace />;
@@ -35,9 +29,11 @@ function ExperienceDetails() {
     });
   };
 
-  const duration = `${formatDate(experience.startDate)} — ${
-    experience.current ? "Present" : formatDate(experience.endDate)
-  }`;
+  const duration = formatDateRange(
+    experience.startDate,
+    experience.endDate,
+    formatDate,
+  );
 
   return (
     <div className="min-h-screen">
@@ -58,10 +54,7 @@ function ExperienceDetails() {
                     className="h-full w-full object-contain p-3"
                   />
                 ) : (
-                  <BriefcaseBusiness
-                    size={38}
-                    className="text-gray-400"
-                  />
+                  <BriefcaseBusiness size={38} className="text-gray-400" />
                 )}
               </div>
 

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "company": "Sumago Infotech Pvt. Ltd.",
-    "role": "Java Full Stack Developer Intern",
+    "role": "Java Full Stack Developer",
     "employmentType": "Internship",
     "shortDescription": "Completed a 12-week industrial training program focused on Java full-stack development.",
     "description": "Completed a 12-week industrial training program in Full Stack Development using Java from June to August 2025.\n\nThe internship provided practical exposure to full-stack development, including Java-based backend development, frontend technologies, database integration, and software development workflows.",
@@ -11,8 +11,8 @@
     "location": "Remote",
     "logo": "/images/experience/sumago-infotech/logo.png",
     "projects": [4],
-    "skills": [1, 2, 3, 10],
-    "technologies": [1, 3, 7, 8, 17],
+    "skills": [4, 5, 6, 7, 9],
+    "technologies": [5, 9, 10, 11, 16],
     "certificates": [1],
     "achievements": [],
     "competitions": []
@@ -29,8 +29,8 @@
     "location": "Remote",
     "logo": "/images/experience/softspire-solutions/logo.png",
     "projects": [3],
-    "skills": [1, 2, 3, 5, 6, 8, 10],
-    "technologies": [1, 9, 10, 17, 24],
+    "skills": [2, 4, 5, 6, 7, 8, 9],
+    "technologies": [5, 9, 11, 16, 17, 21, 22],
     "certificates": [5],
     "achievements": [],
     "competitions": []

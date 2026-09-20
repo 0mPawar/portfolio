@@ -1,13 +1,9 @@
 import { Link } from "react-router-dom";
-import {
-  ArrowUpRight,
-  Calendar,
-  MapPin,
-  GraduationCap,
-} from "lucide-react";
+import { ArrowUpRight, Calendar, MapPin, GraduationCap } from "lucide-react";
 
 import { getEducationRoute } from "../../constants/routes";
 import { getAssetUrl } from "../../utils/getAssetUrl";
+import { formatDateRange } from "../../utils/formatDate";
 
 function EducationCard({ education }) {
   const formatDate = (date) => {
@@ -19,19 +15,14 @@ function EducationCard({ education }) {
     });
   };
 
-  const duration = education.startDate
-    ? `${formatDate(education.startDate)} — ${
-        education.current
-          ? "Present"
-          : formatDate(education.endDate)
-      }`
-    : null;
+  const duration = formatDateRange(
+    education.startDate,
+    education.endDate,
+    formatDate,
+  );
 
   return (
-    <Link
-      to={getEducationRoute(education.id)}
-      className="group block"
-    >
+    <Link to={getEducationRoute(education.id)} className="group block">
       <article className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-blue-500/30">
         {/* Top Accent */}
         <div className="absolute inset-x-0 top-0 h-1 bg-blue-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -47,10 +38,7 @@ function EducationCard({ education }) {
                 className="h-full w-full object-contain p-2"
               />
             ) : (
-              <GraduationCap
-                size={24}
-                className="text-gray-400"
-              />
+              <GraduationCap size={24} className="text-gray-400" />
             )}
           </div>
 

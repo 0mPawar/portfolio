@@ -1,9 +1,5 @@
-import {
-  CalendarDays,
-  Clock3,
-  GraduationCap,
-  MapPin,
-} from "lucide-react";
+import { CalendarDays, Clock3, GraduationCap, MapPin } from "lucide-react";
+import { formatDateRange } from "../../utils/formatDate";
 
 function EducationOverview({ education }) {
   const formatDate = (date) => {
@@ -32,11 +28,8 @@ function EducationOverview({ education }) {
 
     let months =
       (end.getFullYear() - start.getFullYear()) * 12 +
-      (end.getMonth() - start.getMonth());
-
-    if (end.getDate() < start.getDate()) {
-      months -= 1;
-    }
+      (end.getMonth() - start.getMonth()) +
+      1;
 
     if (months < 1) {
       return "Less than 1 month";
@@ -53,9 +46,7 @@ function EducationOverview({ education }) {
 
     if (remainingMonths > 0) {
       parts.push(
-        `${remainingMonths} ${
-          remainingMonths === 1 ? "month" : "months"
-        }`
+        `${remainingMonths} ${remainingMonths === 1 ? "month" : "months"}`,
       );
     }
 
@@ -65,11 +56,11 @@ function EducationOverview({ education }) {
   const details = [
     {
       label: "Duration",
-      value: `${formatDate(education.startDate)} — ${
-        education.current
-          ? "Present"
-          : formatDate(education.endDate)
-      }`,
+      value: formatDateRange(
+        education.startDate,
+        education.endDate,
+        formatDate,
+      ),
       icon: CalendarDays,
     },
     {
@@ -105,8 +96,7 @@ function EducationOverview({ education }) {
         {/* Description */}
         <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 dark:border-white/10 dark:bg-white/[0.03]">
           <p className="text-base leading-8 text-gray-700 dark:text-gray-300">
-            {education.description ||
-              education.shortDescription}
+            {education.description || education.shortDescription}
           </p>
         </div>
 
@@ -121,10 +111,7 @@ function EducationOverview({ education }) {
               const Icon = item.icon;
 
               return (
-                <div
-                  key={item.label}
-                  className="flex gap-3"
-                >
+                <div key={item.label} className="flex gap-3">
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-gray-100 text-gray-600 dark:bg-white/5 dark:text-gray-300">
                     <Icon size={17} />
                   </div>

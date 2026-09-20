@@ -1,9 +1,5 @@
 import { useParams, Navigate } from "react-router-dom";
-import {
-  Calendar,
-  GraduationCap,
-  MapPin,
-} from "lucide-react";
+import { Calendar, GraduationCap, MapPin } from "lucide-react";
 
 import educationData from "../../data/education.json";
 
@@ -13,12 +9,13 @@ import EducationProjects from "../../components/education/EducationProjects";
 
 import { ROUTES } from "../../constants/routes";
 import { getAssetUrl } from "../../utils/getAssetUrl";
+import { formatDateRange } from "../../utils/formatDate";
 
 function EducationDetails() {
   const { id } = useParams();
 
   const education = educationData.find(
-    (item) => String(item.id) === String(id)
+    (item) => String(item.id) === String(id),
   );
 
   if (!education) {
@@ -34,11 +31,11 @@ function EducationDetails() {
     });
   };
 
-  const duration = `${formatDate(education.startDate)} — ${
-    education.current
-      ? "Present"
-      : formatDate(education.endDate)
-  }`;
+  const duration = formatDateRange(
+    education.startDate,
+    education.endDate,
+    formatDate,
+  );
 
   return (
     <div className="min-h-screen">
@@ -59,10 +56,7 @@ function EducationDetails() {
                     className="h-full w-full object-contain p-3"
                   />
                 ) : (
-                  <GraduationCap
-                    size={38}
-                    className="text-gray-400"
-                  />
+                  <GraduationCap size={38} className="text-gray-400" />
                 )}
               </div>
 

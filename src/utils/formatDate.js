@@ -4,7 +4,7 @@ function formatDate(
     day: "numeric",
     month: "long",
     year: "numeric",
-  }
+  },
 ) {
   if (!dateString) return "Unknown";
 
@@ -13,4 +13,14 @@ function formatDate(
   return date.toLocaleDateString("en-IN", options);
 }
 
+function formatDateRange(startDate, endDate, formatDateValue) {
+  if (!startDate && !endDate) return "Date not specified";
+
+  const start = startDate ? formatDateValue(startDate) : "Present";
+  const end = endDate ? formatDateValue(endDate) : "Present";
+
+  return `${start} — ${end}`;
+}
+
 export default formatDate;
+export { formatDateRange };
