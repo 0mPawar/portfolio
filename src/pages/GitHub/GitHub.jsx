@@ -3,6 +3,7 @@ import PageHeader from "../../components/common/PageHeader";
 import GitHubProfile from "../../components/github/GitHubProfile";
 import GitHubStats from "../../components/github/GitHubStats";
 import ContributionChart from "../../components/github/ContributionChart";
+import RecentUpdates from "../../components/github/RecentUpdates";
 import RepositoryCard from "../../components/github/RepositoryCard";
 
 import projects from "../../data/projects.json";
@@ -29,6 +30,9 @@ function GitHub() {
 
           {/* Activity / Contributions */}
           <ContributionChart />
+
+          {/* Manually maintained portfolio updates */}
+          <RecentUpdates />
 
           {/* Repositories */}
           {githubProjects.length > 0 && (

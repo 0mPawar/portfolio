@@ -117,5 +117,22 @@
     "education": [],
     "achievements": [],
     "competitions": []
+  },
+  {
+    "id": 6,
+    "name": "Internal Hackathon for Smart India Hackathon 2026",
+    "issuer": "Amrutvahini College of Engineering, Sangamner",
+    "issueDate": "2026-09-05",
+    "credentialId": null,
+    "credentialUrl": null,
+    "image": "/images/certificates/internal-hackathon-for-smart-india-hackathon-2k26.jpg",
+    "description": "Certificate of participation for actively participating in the Internal Hackathon for Smart India Hackathon 2026 as a member of Team TECHTITANS 3.0. The event was organized by Amrutvahini College of Engineering, Sangamner, on 4 and 5 September 2026.",
+    "skills": [4],
+    "technologies": [17, 20],
+    "projects": [7],
+    "experience": [],
+    "education": [],
+    "achievements": [],
+    "competitions": []
   }
 ]

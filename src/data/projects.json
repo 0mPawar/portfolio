@@ -8,6 +8,7 @@
     "logo": "/images/projects/howmeify/logo.svg",
     "banner": "/images/projects/howmeify/logo.svg",
     "screenshots": [],
+    "media": [],
     "category": "Academic",
     "featured": true,
     "status": "Completed",
@@ -37,6 +38,7 @@
     "logo": "/images/projects/aimcrypt/logo.png",
     "banner": "/images/projects/aimcrypt/logo.png",
     "screenshots": [],
+    "media": [],
     "category": "Academic",
     "featured": false,
     "status": "Completed",
@@ -65,6 +67,7 @@
     "logo": "/images/projects/fooddify/logo.png",
     "banner": "/images/projects/fooddify/logo.png",
     "screenshots": [],
+    "media": [],
     "category": "Experience",
     "featured": true,
     "status": "Completed",
@@ -95,6 +98,7 @@
     "logo": "/images/projects/gstnest/logo401.png",
     "banner": "/images/projects/gstnest/GSTNest.png",
     "screenshots": [],
+    "media": [],
     "category": "Experience",
     "featured": false,
     "status": "Completed",
@@ -123,6 +127,84 @@
     "logo": "/images/projects/unit-calculator/logo.png",
     "banner": "/images/projects/unit-calculator/logo.png",
     "screenshots": [],
+    "media": [
+      {
+        "type": "image",
+        "src": "/images/projects/unit-calculator/screenshots/0splashscreen.jpg",
+        "alt": "Unit Calculator splash screen"
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/unit-calculator/screenshots/1calculator.jpg",
+        "alt": "Unit Calculator main calculator screen"
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/unit-calculator/screenshots/2length.jpg",
+        "alt": "Unit Calculator length conversion screen"
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/unit-calculator/screenshots/3area.jpg",
+        "alt": "Unit Calculator area conversion screen"
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/unit-calculator/screenshots/4volume.jpg",
+        "alt": "Unit Calculator volume conversion screen"
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/unit-calculator/screenshots/5weight.jpg",
+        "alt": "Unit Calculator weight conversion screen"
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/unit-calculator/screenshots/6speed.jpg",
+        "alt": "Unit Calculator speed conversion screen"
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/unit-calculator/screenshots/7temperature.jpg",
+        "alt": "Unit Calculator temperature conversion screen"
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/unit-calculator/screenshots/8power.jpg",
+        "alt": "Unit Calculator power conversion screen"
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/unit-calculator/screenshots/9energy.jpg",
+        "alt": "Unit Calculator energy conversion screen"
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/unit-calculator/screenshots/10frequency.jpg",
+        "alt": "Unit Calculator frequency conversion screen"
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/unit-calculator/screenshots/11storage.jpg",
+        "alt": "Unit Calculator storage conversion screen"
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/unit-calculator/screenshots/12time.jpg",
+        "alt": "Unit Calculator time conversion screen"
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/unit-calculator/screenshots/13about.jpg",
+        "alt": "Unit Calculator about screen"
+      },
+      {
+        "type": "video",
+        "src": "/images/projects/unit-calculator/Unit Calculator YT Video.mp4",
+        "poster": "/images/projects/unit-calculator/screenshots/0splashscreen.jpg",
+        "alt": "Unit Calculator app demonstration video"
+      }
+    ],
     "category": "Personal",
     "featured": true,
     "status": "Completed",
@@ -134,8 +216,9 @@
     "achievements": [],
     "competitions": [],
     "features": ["Unit conversion", "Android application", "Modern Android UI"],
-    "githubUrl": null,
-    "liveUrl": null
+    "githubUrl": "https://github.com/0mPawar/Unit-Calculator",
+    "liveUrl": "https://github.com/0mPawar/Unit-Calculator/blob/main/releases",
+    "validDemo": "https://youtube.com/shorts/I_4EWVBE6c4?si=9mOAy83wO-ZAfalQ"
   },
   {
     "id": 6,
@@ -146,6 +229,7 @@
     "logo": "/logo.png",
     "banner": "/logo.png",
     "screenshots": [],
+    "media": [],
     "category": "Personal",
     "featured": false,
     "status": "In Development",
@@ -173,6 +257,7 @@
     "logo": "/images/projects/pikmitra/logo.png",
     "banner": "/images/projects/pikmitra/logo.png",
     "screenshots": [],
+    "media": [],
     "category": "Hackathon",
     "featured": false,
     "status": "In Development",

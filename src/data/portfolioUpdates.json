@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "date": "2026-09-01",
+    "title": "Updated portfolio data notice",
+    "description": "Added a portfolio data notice explaining that some information may not have been fully cross-checked yet and will be updated as the data is verified.",
+    "type": "Update"
+  },
+  {
+    "id": 2,
+    "date": "2026-09-18",
+    "title": "Fixed internship duration calculation",
+    "description": "Corrected the internship duration calculation and updated the related portfolio information.",
+    "type": "Fix"
+  },
+  {
+    "id": 3,
+    "date": "2026-10-04",
+    "title": "Improved project links",
+    "description": "Updated project link actions so available links open normally while unavailable Demo and Documentation options provide a clear availability message.",
+    "type": "Improvement"
+  },
+
+  {
+    "id": 4,
+    "date": "2026-10-04",
+    "title": "Improved project media gallery",
+    "description": "Added responsive project media galleries with support for desktop and mobile screenshots, thumbnail previews, and fullscreen viewing.",
+    "type": "Feature"
+  }
+]

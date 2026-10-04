@@ -1,12 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AlertTriangle, CalendarDays, Info, Wrench, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import { APP_CONFIG } from "../../constants/appConfig";
+import { ROUTES } from "../../constants/routes";
 import getPortfolioStatus from "../../utils/getPortfolioStatus";
 
 function PortfolioStatusAlert() {
   const status = getPortfolioStatus();
   const [isOpen, setIsOpen] = useState(() => Boolean(status?.show));
+
+  useEffect(() => {
+    if (!isOpen || !status?.show) return undefined;
+
+    function handleKeyDown(event) {
+      if (event.key === "Escape" && !event.defaultPrevented) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen, status?.show]);
 
   // Do not render anything for normal status
   // or if the alert has been closed.
@@ -123,6 +138,26 @@ function PortfolioStatusAlert() {
               <p className="text-sm leading-6 text-gray-400">{status.notice}</p>
             </div>
           )}
+
+          <div className="mt-4 flex min-w-0 gap-3 rounded-2xl bg-blue-500/5 p-4">
+            <Info
+              size={19}
+              aria-hidden="true"
+              className="mt-0.5 shrink-0 text-blue-400"
+            />
+
+            <p className="min-w-0 text-sm leading-6 text-gray-400">
+              Want to see previous changes and the latest updates? Visit{" "}
+              <Link
+                to={ROUTES.GITHUB}
+                onClick={() => setIsOpen(false)}
+                className="font-medium text-blue-400 underline-offset-4 hover:text-blue-300 hover:underline focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400"
+              >
+                Recent Updates
+              </Link>{" "}
+              on the GitHub Activity page.
+            </p>
+          </div>
 
           {/* Continue Button */}
           <button

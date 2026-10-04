@@ -5,7 +5,7 @@ export const APP_CONFIG = {
   websiteName: "Portfolio Website",
   copyrightYear: 2026,
 
-  lastUpdated: "20-09-2026",
+  lastUpdated: "04-10-2026",
   isDataUpdated: true,
   isUnderDevelopment: false,
   isUnderMaintenance: false,

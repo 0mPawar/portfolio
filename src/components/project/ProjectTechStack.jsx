@@ -1,6 +1,7 @@
 import { Braces, Wrench } from "lucide-react";
 
 import Icon from "../common/Icon";
+import ProjectGallery from "./ProjectGallery";
 
 import skills from "../../data/skills.json";
 import technologies from "../../data/technologies.json";
@@ -31,6 +32,8 @@ function ProjectTechStack({ project }) {
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">
           Tech Stack
         </p>
+
+        <ProjectGallery project={project} />
 
         <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
           Skills & Technologies

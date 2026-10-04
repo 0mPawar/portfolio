@@ -6,7 +6,6 @@ import ProjectHero from "../../components/project/ProjectHero";
 import ProjectOverview from "../../components/project/ProjectOverview";
 import ProjectFeatures from "../../components/project/ProjectFeatures";
 import ProjectTechStack from "../../components/project/ProjectTechStack";
-import ProjectGallery from "../../components/project/ProjectGallery";
 import ProjectLinks from "../../components/project/ProjectLinks";
 import RelatedProjects from "../../components/project/RelatedProjects";
 
@@ -35,8 +34,6 @@ function ProjectDetails() {
             <ProjectFeatures project={project} />
 
             <ProjectTechStack project={project} />
-
-            <ProjectGallery project={project} />
 
             <RelatedProjects project={project} />
           </div>
